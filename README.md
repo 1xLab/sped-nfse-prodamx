@@ -1,6 +1,6 @@
 # sped-nfse-prodam
 
-## BETHA-TESTS
+## BETA-TESTS - dev testes
 
 ## Este pacote atende o provedor Prodam São Paulo SP
 
