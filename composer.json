@@ -1,9 +1,9 @@
 {
-    "name": "sped-nfse-prodam",
+    "name": "sped-nfse-prodamx",
     "type": "library",
     "description": "API para geração e comunicação de RPS e NFSe no padão Prodam São Paulo SP.",
     "keywords": ["nfe","nfse","sped","nfephp"],
-    "homepage": "https://github.com/nfephp-org/sped-nfse-prodam",
+    "homepage": "https://github.com/1xLab/sped-nfse-prodamx/",
     "license": ["LGPL-3.0-or-later", "GPL-3.0-or-later", "MIT"],
     "authors": [
         {
