@@ -1,5 +1,5 @@
 {
-    "name": "nfephp-org/sped-nfse-prodam",
+    "name": "sped-nfse-prodam",
     "type": "library",
     "description": "API para geração e comunicação de RPS e NFSe no padão Prodam São Paulo SP.",
     "keywords": ["nfe","nfse","sped","nfephp"],
