@@ -20,8 +20,8 @@ use NFePHP\NFSeProdam\Common\Soap\SoapInterface;
 use NFePHP\Common\Exception\SoapException;
 use NFePHP\Common\Exception\RuntimeException;
 use NFePHP\Common\Strings;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local;
+use League\Flysystem\Local\LocalFilesystemAdapter;
+use League\Flysystem\Local\LocalFilesystemAdapter;
 use Psr\Log\LoggerInterface;
 
 abstract class SoapBase implements SoapInterface
