@@ -387,37 +387,27 @@ abstract class SoapBase implements SoapInterface
         $this->prifile = $this->certsdir. Strings::randomString(10).'.pem';
         $this->pubfile = $this->certsdir . Strings::randomString(10).'.pem';
         $this->certfile = $this->certsdir . Strings::randomString(10).'.pem';
-        $ret = true;
         $private = $this->certificate->privateKey;
         if ($this->encriptPrivateKey) {
-            //cria uma senha temporária ALEATÓRIA para salvar a chave primaria
-            //portanto mesmo que localizada e identificada não estará acessível
-            //pois sua senha não existe além do tempo de execução desta classe
             $this->temppass = Strings::randomString(16);
-            //encripta a chave privada entes da gravação do filesystem
             openssl_pkey_export(
                 $this->certificate->privateKey,
                 $private,
                 $this->temppass
             );
         }
-        $ret &= $this->filesystem->write(
+        $this->filesystem->write(
             $this->prifile,
             $private
         );
-        $ret &= $this->filesystem->write(
+        $this->filesystem->write(
             $this->pubfile,
             $this->certificate->publicKey
         );
-        $ret &= $this->filesystem->write(
+        $this->filesystem->write(
             $this->certfile,
             $private."{$this->certificate}"
         );
-        if (!$ret) {
-            throw new RuntimeException(
-                'Unable to save temporary key files in folder.'
-            );
-        }
     }
     
     /**
